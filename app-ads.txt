@@ -1,0 +1,2 @@
+# Winky — app-ads.txt (AdMob, publisher pub-2608212671867757)
+google.com, pub-2608212671867757, DIRECT, f08c47fec0942fa0
