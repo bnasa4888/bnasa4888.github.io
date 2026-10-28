@@ -1,0 +1,62 @@
+:root {
+  --red: #C0342A;
+  --red-display: #E63A2E;
+  --surface: #FCF5EC;
+  --card: #F1ECDC;
+  --outline: #E6DFCB;
+  --ink: #2B1D17;
+  --muted: #6A6256;
+  --on-red: #FFF6EE;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --red: #FF8A7A;
+    --surface: #16110E;
+    --card: #221A16;
+    --outline: #4A3D35;
+    --ink: #F5EBE2;
+    --muted: #B5A698;
+    --on-red: #2B1008;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font: 16px/1.6 "Manrope", system-ui, -apple-system, sans-serif;
+}
+a { color: var(--red); }
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+.hero { padding: 72px 0 48px; border-bottom: 1px solid var(--outline); }
+.hero.small { padding: 48px 0 32px; }
+.eyebrow {
+  margin: 0 0 12px; font-size: 13px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--red);
+}
+.eyebrow a { text-decoration: none; }
+h1 {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 800;
+  font-size: clamp(36px, 7vw, 64px); line-height: 1.02; margin: 0 0 16px;
+}
+h2 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 800; font-size: 22px; margin: 0 0 6px; }
+.lead { font-size: 18px; color: var(--muted); max-width: 40em; margin: 0; }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn {
+  display: inline-block; padding: 12px 20px; border-radius: 12px;
+  background: var(--red); color: var(--on-red); font-weight: 700; text-decoration: none;
+}
+.btn.ghost { background: transparent; color: var(--muted); border: 1px solid var(--outline); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; padding: 40px 0 16px; }
+.card { background: var(--card); border: 1px solid var(--outline); border-radius: 16px; padding: 20px; }
+.card p, .pro p { margin: 0; color: var(--muted); }
+.pro { padding: 24px 0 48px; }
+.faq { padding: 32px 16px 48px; }
+details { border-bottom: 1px solid var(--outline); padding: 16px 0; }
+summary { cursor: pointer; font-weight: 700; font-size: 17px; }
+details p { color: var(--muted); margin: 10px 0 0; }
+.foot {
+  display: flex; flex-wrap: wrap; gap: 8px 20px; padding-top: 24px; padding-bottom: 40px;
+  border-top: 1px solid var(--outline); font-size: 14px; color: var(--muted);
+}
